@@ -49,6 +49,12 @@ img { max-width: 100%; }
 
 .logo-icon { color: var(--red); font-size: 0.7rem; }
 
+.logo-home {
+  color: var(--white); font-size: 1.4rem; line-height: 1;
+  margin-left: 0.5rem; opacity: 0.8; transition: opacity 0.2s;
+}
+.logo-home:hover { opacity: 1; }
+
 .nav-links {
   display: flex; align-items: center; gap: 0.25rem;
   list-style: none;
