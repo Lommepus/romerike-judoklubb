@@ -102,6 +102,12 @@ img { max-width: 100%; }
 }
 .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
+.btn-outline-red {
+  background: transparent; color: var(--red);
+  border: 2px solid var(--red);
+}
+.btn-outline-red:hover { background: var(--red); color: var(--white); }
+
 /* ===== HERO ===== */
 #hero {
   position: relative;
