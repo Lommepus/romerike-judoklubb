@@ -440,10 +440,8 @@ footer {
   border: none;
 }
 
-.about-stats-overlay .stat:first-child { border-radius: var(--radius) 0 0 0; }
-.about-stats-overlay .stat:nth-child(2) { border-radius: 0 var(--radius) 0 0; }
-.about-stats-overlay .stat:nth-child(3) { border-radius: 0 0 0 var(--radius); }
-.about-stats-overlay .stat:last-child { border-radius: 0 0 var(--radius) 0; }
+.about-stats-overlay .stat:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+.about-stats-overlay .stat:last-child  { border-radius: 0 var(--radius) var(--radius) 0; }
 
 .about-stats-overlay .stat-num { color: var(--red); }
 .about-stats-overlay .stat-label { color: rgba(255,255,255,0.6); }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trenere – Romerike Judoklubb</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .trainers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .trainer-card {
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .trainer-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+
+    .trainer-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    }
+
+    .trainer-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.3); font-size: 0.82rem;
+    }
+
+    .trainer-info {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .trainer-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+
+    .trainer-role {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .trainer-bio {
+      color: var(--grey);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      .trainers-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">
+        <img src="logo.webp" alt="Romerike Judoklubb" class="logo-img" />
+        Romerike Judoklubb
+      </a>
+      <button class="burger" id="burger" aria-label="Meny">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#om-oss">Om oss</a></li>
+        <li><a href="index.html#treninger">Timeplan</a></li>
+        <li><a href="nyheter.html">Nyheter</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#kontakt">Kontakt oss</a></li>
+        <li><a href="signup.html" class="btn-nav">Påmelding</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="label">Vårt team</span>
+    <h1>Trenere</h1>
+  </div>
+
+  <!-- TRAINERS -->
+  <section class="section">
+    <div class="container">
+      <div class="trainers-grid">
+
+        <div class="trainer-card">
+          <!-- 📸 Bytt src til bilde av treneren, f.eks. src="images/trener1.jpg" -->
+          <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
+          <div class="trainer-info">
+            <div class="trainer-name">Navn Navnesen</div>
+            <span class="trainer-role">Hovedtrener</span>
+            <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
+          <div class="trainer-info">
+            <div class="trainer-name">Navn Navnesen</div>
+            <span class="trainer-role">Trener</span>
+            <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
+          <div class="trainer-info">
+            <div class="trainer-name">Navn Navnesen</div>
+            <span class="trainer-role">Trener</span>
+            <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
+          <div class="trainer-info">
+            <div class="trainer-name">Navn Navnesen</div>
+            <span class="trainer-role">Barne- og ungdomstrener</span>
+            <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">Romerike Judoklubb</div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">E-post</span>
+          <a href="mailto:post@romerikejudo.no">post@romerikejudo.no</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Telefon</span>
+          <a href="tel:+4712345678">+47 123 45 678</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Adresse</span>
+          <span>Åråsveien 16A, 2007 Kjeller</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Org.nr</span>
+          <span>123 456 789</span>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Romerike Judoklubb. Alle rettigheter forbeholdt.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
