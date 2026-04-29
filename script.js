@@ -11,6 +11,16 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
+// Mobile dropdown toggle
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 540) {
+      e.preventDefault();
+      toggle.closest('.dropdown').classList.toggle('open');
+    }
+  });
+});
+
 
 // Scroll-in animations
 const observer = new IntersectionObserver((entries) => {
