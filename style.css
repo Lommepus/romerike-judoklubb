@@ -460,6 +460,16 @@ footer {
 
 .footer-contact-item a:hover { color: var(--white); }
 
+.footer-grasrot {
+  display: block;
+  max-width: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: opacity 0.2s;
+}
+.footer-grasrot:hover { opacity: 0.85; }
+.footer-grasrot img { width: 100%; display: block; }
+
 .footer-copy {
   font-size: 0.8rem;
   padding-top: 1rem;
