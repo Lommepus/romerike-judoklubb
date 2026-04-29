@@ -99,6 +99,10 @@ img { max-width: 100%; }
   background: rgba(255,255,255,0.06);
 }
 
+.nav-home { display: flex !important; align-items: center; gap: 0.4rem; }
+.nav-home svg { flex-shrink: 0; }
+.nav-home-text { display: none; }
+
 .btn-nav {
   background: var(--red) !important; color: var(--white) !important;
   padding: 0.4rem 1.1rem !important; border-radius: 6px !important;
@@ -597,6 +601,7 @@ footer {
   .nav-links.open { display: flex; }
   .nav-links a { display: block; padding: 0.6rem 0.85rem; }
   .burger { display: block; }
+  .nav-home-text { display: inline; }
 
   .dropdown-menu {
     display: block;
