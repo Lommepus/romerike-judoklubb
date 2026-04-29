@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trenere & klasser – Romerike Judoklubb</title>
+  <title>Våre trenere – Romerike Judoklubb</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── Trainer cards ── */
     .trainers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 2rem;
     }
 
@@ -70,81 +69,47 @@
       color: var(--grey);
       font-size: 0.9rem;
       line-height: 1.6;
-    }
-
-    /* ── Class cards ── */
-    .classes-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .class-card {
-      background: var(--white);
-      border: 1px solid var(--light-grey);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.75rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .class-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
-    }
-
-    .class-age {
-      display: inline-block;
-      background: #f3f3f3;
-      color: var(--grey);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 0.2rem 0.7rem;
-      border-radius: 20px;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .class-name {
-      font-size: 1.15rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-    }
-
-    .class-desc {
-      color: var(--grey);
-      font-size: 0.9rem;
-      line-height: 1.6;
       margin-bottom: 1rem;
     }
 
-    .class-times {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
+    .trainer-classes {
+      border-top: 1px solid var(--light-grey);
+      padding-top: 0.9rem;
+      margin-top: 0.5rem;
     }
 
-    .class-times li {
-      font-size: 0.85rem;
-      color: var(--dark);
-      display: flex;
-      gap: 0.5rem;
-    }
-
-    .class-times .day {
+    .trainer-classes-label {
+      font-size: 0.75rem;
       font-weight: 700;
-      min-width: 70px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--grey);
+      margin-bottom: 0.5rem;
     }
 
-    .class-times .time {
-      color: var(--grey);
+    .trainer-class-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .trainer-class-tag {
+      background: #f3f3f3;
+      color: var(--dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 20px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .trainer-class-tag:hover {
+      background: var(--red);
+      color: white;
     }
 
     @media (max-width: 480px) {
       .trainers-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .classes-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -162,8 +127,8 @@
         <li class="dropdown">
           <a href="index.html#om-oss" class="dropdown-toggle">Om oss <span class="dropdown-arrow">▾</span></a>
           <ul class="dropdown-menu">
-            <li><a href="trenere.html">Partioversikt</a></li>
-            <li><a href="trenere.html">Våre trenere</a></li>
+            <li><a href="kurs.html">Partioversikt</a></li>
+            <li><a href="team.html">Våre trenere</a></li>
             <li><a href="hva-er-judo.html">Hva er judo?</a></li>
           </ul>
         </li>
@@ -185,122 +150,76 @@
 
   <!-- PAGE HEADER -->
   <div class="page-header">
-    <span class="label">Vårt tilbud</span>
-    <h1>Trenere &amp; klasser</h1>
+    <span class="label">Vårt team</span>
+    <h1>Våre trenere</h1>
   </div>
 
-  <!-- CLASSES -->
+  <!-- TRAINERS -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="label">Treninger</span>
-        <h2>Våre klasser</h2>
-      </div>
-      <div class="classes-grid">
-
-        <div class="class-card">
-          <span class="class-age">Fra 4 år</span>
-          <div class="class-name">Knøttejudo</div>
-          <p class="class-desc">En lekbasert introduksjon til judo for de aller yngste. Fokus på motorikk, koordinasjon og gleden ved bevegelse.</p>
-          <ul class="class-times">
-            <li><span class="day">Onsdag</span><span class="time">17:30 – 18:15</span></li>
-          </ul>
-        </div>
-
-        <div class="class-card">
-          <span class="class-age">Fra 7 år</span>
-          <div class="class-name">Barn</div>
-          <p class="class-desc">Barna lærer judoteknikk, regler og respekt for makkeren i et trygt og morsomt miljø.</p>
-          <ul class="class-times">
-            <li><span class="day">Tirsdag</span><span class="time">17:30 – 18:30</span></li>
-            <li><span class="day">Torsdag</span><span class="time">17:30 – 18:30</span></li>
-          </ul>
-        </div>
-
-        <div class="class-card">
-          <span class="class-age">Fra 11 år</span>
-          <div class="class-name">Ungdom</div>
-          <p class="class-desc">For ungdom som vil utvikle tekniske ferdigheter og konkurransekunnskap. Fokus på kast, nedtagninger og randori.</p>
-          <ul class="class-times">
-            <li><span class="day">Tirsdag</span><span class="time">18:30 – 19:30</span></li>
-            <li><span class="day">Torsdag</span><span class="time">18:30 – 19:30</span></li>
-          </ul>
-        </div>
-
-        <div class="class-card">
-          <span class="class-age">Fra 16 år</span>
-          <div class="class-name">Voksne – alle nivåer</div>
-          <p class="class-desc">For alle voksne fra nybegynner til erfaren. Treningen dekker teknikk, kast og bakkejudo i et inkluderende miljø.</p>
-          <ul class="class-times">
-            <li><span class="day">Tirsdag</span><span class="time">19:30 – 21:00</span></li>
-            <li><span class="day">Torsdag</span><span class="time">19:30 – 21:00</span></li>
-          </ul>
-        </div>
-
-        <div class="class-card">
-          <span class="class-age">Fra 16 år</span>
-          <div class="class-name">Kamptrening</div>
-          <p class="class-desc">Intensiv kamptrening for de som ønsker å konkurrere eller pushe grensene sine. Fokus på randori og kampstrategi.</p>
-          <ul class="class-times">
-            <li><span class="day">Mandag</span><span class="time">19:00 – 20:30</span></li>
-          </ul>
-        </div>
-
-        <div class="class-card">
-          <span class="class-age">Alle nivåer</span>
-          <div class="class-name">Åpen matte / kamptrening</div>
-          <p class="class-desc">Åpen treningsøkt for alle. Kom og tren i ditt eget tempo – enten du vil jobbe med teknikk eller kaste deg ut i randori.</p>
-          <ul class="class-times">
-            <li><span class="day">Lørdag</span><span class="time">10:00 – 12:00</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- TRAINERS -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Vårt team</span>
-        <h2>Trenere</h2>
-      </div>
       <div class="trainers-grid">
 
-        <div class="trainer-card">
+        <div class="trainer-card" id="hovedtrener">
           <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
           <div class="trainer-info">
             <div class="trainer-name">Navn Navnesen</div>
             <span class="trainer-role">Hovedtrener</span>
             <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+            <div class="trainer-classes">
+              <div class="trainer-classes-label">Underviser i</div>
+              <div class="trainer-class-tags">
+                <a href="kurs.html#voksne" class="trainer-class-tag">Voksne</a>
+                <a href="kurs.html#kamptrening" class="trainer-class-tag">Kamptrening</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="trainer-card">
+        <div class="trainer-card" id="trener-1">
           <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
           <div class="trainer-info">
             <div class="trainer-name">Navn Navnesen</div>
             <span class="trainer-role">Trener</span>
             <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+            <div class="trainer-classes">
+              <div class="trainer-classes-label">Underviser i</div>
+              <div class="trainer-class-tags">
+                <a href="kurs.html#ungdom" class="trainer-class-tag">Ungdom</a>
+                <a href="kurs.html#voksne" class="trainer-class-tag">Voksne</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="trainer-card">
+        <div class="trainer-card" id="trener-2">
           <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
           <div class="trainer-info">
             <div class="trainer-name">Navn Navnesen</div>
             <span class="trainer-role">Trener</span>
             <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+            <div class="trainer-classes">
+              <div class="trainer-classes-label">Underviser i</div>
+              <div class="trainer-class-tags">
+                <a href="kurs.html#barn" class="trainer-class-tag">Barn</a>
+                <a href="kurs.html#ungdom" class="trainer-class-tag">Ungdom</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="trainer-card">
+        <div class="trainer-card" id="barne-trener">
           <div class="trainer-photo-placeholder">📸 Legg til bilde</div>
           <div class="trainer-info">
             <div class="trainer-name">Navn Navnesen</div>
             <span class="trainer-role">Barne- og ungdomstrener</span>
             <p class="trainer-bio">Kort beskrivelse av treneren – bakgrunn, grad, erfaring og spesialitet.</p>
+            <div class="trainer-classes">
+              <div class="trainer-classes-label">Underviser i</div>
+              <div class="trainer-class-tags">
+                <a href="kurs.html#knottejudo" class="trainer-class-tag">Knøttejudo</a>
+                <a href="kurs.html#barn" class="trainer-class-tag">Barn</a>
+              </div>
+            </div>
           </div>
         </div>
 
