@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hva er judo? – Romerike Judoklubb</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Etymology block ── */
+    .etymology {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2.5rem 0;
+    }
+
+    .etymology-card {
+      background: var(--dark);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 2.5rem;
+      text-align: center;
+      flex: 1;
+      min-width: 200px;
+      max-width: 260px;
+    }
+
+    .etymology-kanji {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .etymology-word {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .etymology-meaning {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+    }
+
+    /* ── Values grid ── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .value-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .value-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .value-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .value-desc {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.5;
+    }
+
+    /* ── Training blocks ── */
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .training-card {
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+    }
+
+    .training-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .training-card p {
+      font-size: 0.9rem;
+      color: var(--grey);
+      line-height: 1.6;
+    }
+
+    .training-label {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── Founder quote ── */
+    .founder-quote {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .founder-quote blockquote {
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.65;
+      color: var(--white);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .founder-quote cite {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      font-style: normal;
+    }
+
+    /* ── CTA strip ── */
+    .cta-strip {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      background: var(--red);
+    }
+
+    .cta-strip h2 {
+      color: var(--white);
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-strip p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--red);
+      font-weight: 700;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+
+    .btn-white:hover { opacity: 0.9; }
+
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .training-grid { grid-template-columns: 1fr; }
+      .etymology-card { max-width: 100%; }
+      .founder-quote blockquote { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">
+        <img src="logo.webp" alt="Romerike Judoklubb" class="logo-img" />
+        Romerike Judoklubb
+      </a>
+      <button class="burger" id="burger" aria-label="Meny">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li class="dropdown">
+          <a href="index.html#om-oss" class="dropdown-toggle">Om oss <span class="dropdown-arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="trenere.html">Partioversikt</a></li>
+            <li><a href="trenere.html">Våre trenere</a></li>
+            <li><a href="hva-er-judo.html">Hva er judo?</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#treninger">Timeplan</a></li>
+        <li class="dropdown">
+          <a href="nyheter.html" class="dropdown-toggle">Medlemsinfo <span class="dropdown-arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="arrangementer.html">Arrangementer</a></li>
+            <li><a href="nyheter.html">Nyheter</a></li>
+          </ul>
+        </li>
+        <li><a href="kalender.html">Kalender</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#kontakt">Kontakt oss</a></li>
+        <li><a href="signup.html" class="btn-nav">Påmelding</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <span class="label">Lær mer</span>
+    <h1>Hva er judo?</h1>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Opprinnelse</span>
+        <h2>En japansk kampsport og livsfilosofi</h2>
+      </div>
+      <p style="max-width:680px;margin:0 auto 2.5rem;text-align:center;color:var(--grey);font-size:1.05rem;line-height:1.75">
+        Judo ble grunnlagt i Japan i 1882 av <strong>Jigoro Kano</strong>. Han tok de beste elementene fra de gamle jiu-jitsu-stilene og skapte en moderne idrett og disiplin bygget på respekt, selvutvikling og samarbeid. I dag er judo en olympisk idrett som utøves av millioner av mennesker i over 200 land.
+      </p>
+      <div class="etymology">
+        <div class="etymology-card">
+          <div class="etymology-kanji">柔</div>
+          <div class="etymology-word">Ju</div>
+          <div class="etymology-meaning">Blidhet · Mildhet · Fleksibilitet</div>
+        </div>
+        <div class="etymology-card">
+          <div class="etymology-kanji">道</div>
+          <div class="etymology-word">Do</div>
+          <div class="etymology-meaning">Vei · Retning · Livsstil</div>
+        </div>
+      </div>
+      <p style="max-width:680px;margin:0 auto;text-align:center;color:var(--grey);line-height:1.75">
+        Navnet <em>judo</em> betyr bokstavelig talt <strong>«den milde veien»</strong> — prinsippet om å bruke motstanderens kraft mot ham selv, fremfor å møte kraft med kraft.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS IN TRAINING -->
+  <section class="section" style="background:var(--off-white,#f8f8f8)">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Treningen</span>
+        <h2>Hva skjer på matta?</h2>
+      </div>
+      <div class="training-grid">
+
+        <div class="training-card">
+          <span class="training-label">Tachi-waza</span>
+          <h3>Kasteteknikker</h3>
+          <p>Judo er kanskje mest kjent for sine spektakulære kast. Du lærer å bruke balanse, timing og teknikk for å kaste motstanderen – uansett størrelse og styrke.</p>
+        </div>
+
+        <div class="training-card">
+          <span class="training-label">Ne-waza</span>
+          <h3>Bakkejudo</h3>
+          <p>Når kampen går til bakken brukes kontrollhold, armlåser og kvelerteknikker. Bakkejudo krever tålmodighet, teknikk og evnen til å lese motstanderen.</p>
+        </div>
+
+        <div class="training-card">
+          <span class="training-label">Randori</span>
+          <h3>Fri kamp</h3>
+          <p>I randori trener du teknikk mot en aktiv motstander i kontrollerte omgivelser. Det er her teorien møter praksis – og du virkelig utvikler deg.</p>
+        </div>
+
+        <div class="training-card">
+          <span class="training-label">Kata</span>
+          <h3>Formøvelser</h3>
+          <p>Kata er forhåndsbestemte bevegelsesmønstre som trenes med en partner. Det er judoens tradisjonelle form for teknikklæring og bevegelsesforståelse.</p>
+        </div>
+
+        <div class="training-card">
+          <span class="training-label">Ukemi</span>
+          <h3>Falltrening</h3>
+          <p>Noe av det første du lærer i judo er å falle trygt. God fallteknikk er ikke bare sikkerhet – det gjør at du tørr å kaste deg ut i treningen med full innsats.</p>
+        </div>
+
+        <div class="training-card">
+          <span class="training-label">Shiai</span>
+          <h3>Konkurranse</h3>
+          <p>Judo kan konkurreres i alle aldre og nivåer. Konkurranser er en mulighet til å teste deg selv, møte andre utøvere og oppleve judofellesskapet.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER QUOTE -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="founder-quote">
+        <blockquote>
+          «Det ultimate målet med judo er å perfeksjonere seg selv som menneske og bidra til samfunnet.»
+        </blockquote>
+        <cite>— Jigoro Kano, grunnlegger av judo (1860–1938)</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Judoens moralkode</span>
+        <h2>Verdiene som bærer idretten</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🤝</div>
+          <div class="value-name">Høflighet</div>
+          <div class="value-desc">Vi behandler hverandre med respekt – på og utenfor matta.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">💪</div>
+          <div class="value-name">Mot</div>
+          <div class="value-desc">Vi tørr å utfordre oss selv og våre grenser.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❤️</div>
+          <div class="value-name">Vennskap</div>
+          <div class="value-desc">Judo bygger fellesskap og varige vennskap.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⚖️</div>
+          <div class="value-name">Ærlighet</div>
+          <div class="value-desc">Vi er ærlige mot oss selv og hverandre.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🎯</div>
+          <div class="value-name">Selvdisiplin</div>
+          <div class="value-desc">Konsistens og innsats er nøkkelen til fremgang.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🧘</div>
+          <div class="value-name">Selvkontroll</div>
+          <div class="value-desc">Vi handler med ro og bevissthet i alle situasjoner.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <div class="value-name">Respekt</div>
+          <div class="value-desc">For trenere, makkere og idretten vi elsker.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🏅</div>
+          <div class="value-name">Ydmykhet</div>
+          <div class="value-desc">Seier og tap møtes med samme sinnsro.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Hvorfor judo?</span>
+        <h2>Fordeler for hele livet</h2>
+      </div>
+      <div class="training-grid">
+        <div class="training-card">
+          <h3>Fysisk utvikling</h3>
+          <p>Judo gir allsidig trening som bygger styrke, koordinasjon, smidighet, balanse og utholdenhet – for alle aldre og nivåer.</p>
+        </div>
+        <div class="training-card">
+          <h3>Mental styrke</h3>
+          <p>Du lærer å håndtere press, motgang og utfordringer. Judo trener ikke bare kroppen – det trener tankene.</p>
+        </div>
+        <div class="training-card">
+          <h3>Selvforsvar</h3>
+          <p>Teknikkene i judo er effektive og praktiske. Du bygger selvtillit og evnen til å beskytte deg selv i hverdagen.</p>
+        </div>
+        <div class="training-card">
+          <h3>Sosialt fellesskap</h3>
+          <p>På matta er alle like. Judo skaper sterke bånd mellom mennesker på tvers av alder, bakgrunn og nivå.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Klar til å prøve?</h2>
+    <p>De første 14 dagene er gratis – ingen forpliktelser, bare judo.</p>
+    <a href="signup.html" class="btn-white">Meld deg på gratis prøveperiode</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">Romerike Judoklubb</div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">E-post</span>
+          <a href="mailto:post@romerikejudoklubb.no">post@romerikejudoklubb.no</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Telefon</span>
+          <a href="tel:+4792043361">+47 920 43 361</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Adresse</span>
+          <span>Åråsveien 16A, 2007 Kjeller</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Org.nr</span>
+          <span>993 861 561</span>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Romerike Judoklubb. Alle rettigheter forbeholdt.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
