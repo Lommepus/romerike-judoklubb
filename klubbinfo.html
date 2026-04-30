@@ -6,6 +6,17 @@
   <title>Klubbinfo – Romerike Judoklubb</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    .klubbinfo-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    @media (max-width: 640px) {
+      .klubbinfo-cols { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
     .resource-list {
       display: flex;
       flex-direction: column;
@@ -117,72 +128,75 @@
     <h1>Klubbinfo</h1>
   </div>
 
-  <!-- DOCUMENTS -->
+  <!-- DOCUMENTS + KONTAKT STYRET -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="label">Ressurser</span>
-        <h2>Dokumenter</h2>
-      </div>
-      <div class="resource-list">
+      <div class="klubbinfo-cols">
 
-        <a href="https://drive.google.com/drive/folders/19zH3HCOKK9YjtRr-i-ztlm0KjBcf0Sj0?usp=sharing" target="_blank" rel="noopener" class="resource-card">
-          <div class="resource-icon">📁</div>
-          <div class="resource-info">
-            <div class="resource-title">Referater</div>
-            <div class="resource-meta">Google Drive – møtereferater og protokoller</div>
+        <div>
+          <div class="section-header">
+            <span class="label">Ressurser</span>
+            <h2>Dokumenter</h2>
           </div>
-          <div class="resource-arrow">→</div>
-        </a>
+          <div class="resource-list">
 
-        <a href="organisasjonskart.html" class="resource-card">
-          <div class="resource-icon">📋</div>
-          <div class="resource-info">
-            <div class="resource-title">Organisasjonskart</div>
-            <div class="resource-meta">Oversikt over klubbens struktur og roller</div>
+            <a href="https://drive.google.com/drive/folders/19zH3HCOKK9YjtRr-i-ztlm0KjBcf0Sj0?usp=sharing" target="_blank" rel="noopener" class="resource-card">
+              <div class="resource-icon">📁</div>
+              <div class="resource-info">
+                <div class="resource-title">Referater</div>
+                <div class="resource-meta">Google Drive – møtereferater og protokoller</div>
+              </div>
+              <div class="resource-arrow">→</div>
+            </a>
+
+            <a href="organisasjonskart.html" class="resource-card">
+              <div class="resource-icon">📋</div>
+              <div class="resource-info">
+                <div class="resource-title">Organisasjonskart</div>
+                <div class="resource-meta">Oversikt over klubbens struktur og roller</div>
+              </div>
+              <div class="resource-arrow">→</div>
+            </a>
+
           </div>
-          <div class="resource-arrow">→</div>
-        </a>
+        </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- KONTAKT STYRET -->
-  <section class="section" style="background:var(--off-white,#f8f8f8)">
-    <div class="container">
-      <div class="section-header">
-        <span class="label">Styret</span>
-        <h2>Kontakt styret</h2>
-      </div>
-      <div class="resource-list">
-
-        <a href="mailto:styret@romerikejudoklubb.no" class="resource-card">
-          <div class="resource-icon">✉️</div>
-          <div class="resource-info">
-            <div class="resource-title">Styret</div>
-            <div class="resource-meta">styret@romerikejudoklubb.no</div>
+        <div>
+          <div class="section-header">
+            <span class="label">Styret</span>
+            <h2>Kontakt styret</h2>
           </div>
-          <div class="resource-arrow">→</div>
-        </a>
+          <div class="resource-list">
 
-        <a href="mailto:styreleder@romerikejudoklubb.no" class="resource-card">
-          <div class="resource-icon">✉️</div>
-          <div class="resource-info">
-            <div class="resource-title">Styreleder</div>
-            <div class="resource-meta">styreleder@romerikejudoklubb.no</div>
-          </div>
-          <div class="resource-arrow">→</div>
-        </a>
+            <a href="mailto:styret@romerikejudoklubb.no" class="resource-card">
+              <div class="resource-icon">✉️</div>
+              <div class="resource-info">
+                <div class="resource-title">Styret</div>
+                <div class="resource-meta">styret@romerikejudoklubb.no</div>
+              </div>
+              <div class="resource-arrow">→</div>
+            </a>
 
-        <a href="mailto:nestleder@romerikejudoklubb.no" class="resource-card">
-          <div class="resource-icon">✉️</div>
-          <div class="resource-info">
-            <div class="resource-title">Nestleder</div>
-            <div class="resource-meta">nestleder@romerikejudoklubb.no</div>
+            <a href="mailto:styreleder@romerikejudoklubb.no" class="resource-card">
+              <div class="resource-icon">✉️</div>
+              <div class="resource-info">
+                <div class="resource-title">Styreleder</div>
+                <div class="resource-meta">styreleder@romerikejudoklubb.no</div>
+              </div>
+              <div class="resource-arrow">→</div>
+            </a>
+
+            <a href="mailto:nestleder@romerikejudoklubb.no" class="resource-card">
+              <div class="resource-icon">✉️</div>
+              <div class="resource-info">
+                <div class="resource-title">Nestleder</div>
+                <div class="resource-meta">nestleder@romerikejudoklubb.no</div>
+              </div>
+              <div class="resource-arrow">→</div>
+            </a>
+
           </div>
-          <div class="resource-arrow">→</div>
-        </a>
+        </div>
 
       </div>
     </div>
