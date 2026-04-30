@@ -43,7 +43,7 @@ document.querySelectorAll(
 });
 
 // Contact form
-const SUPABASE_URL = "https://YOUR_PROJECT_REF.supabase.co";
+const SUPABASE_URL = "https://wayejkvegiumtwhkzezc.supabase.co";
 
 async function handleSubmit(e) {
   e.preventDefault();
