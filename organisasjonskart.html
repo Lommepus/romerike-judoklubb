@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organisasjonskart – Romerike Judoklubb</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .orgkart-wrap {
+      padding: 2.5rem 1.5rem 4rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .orgkart-wrap img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.13);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">
+        <img src="logo.webp" alt="Romerike Judoklubb" class="logo-img" />
+        Romerike Judoklubb
+      </a>
+      <button class="burger" id="burger" aria-label="Meny">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-home" aria-label="Hjem"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.707 2.293a1 1 0 0 0-1.414 0l-7 7A1 1 0 0 0 3 11h1v6a1 1 0 0 0 1 1h4v-4h2v4h4a1 1 0 0 0 1-1v-6h1a1 1 0 0 0 .707-1.707l-7-7z"/></svg><span class="nav-home-text">Hjem</span></a></li>
+        <li class="dropdown">
+          <a href="index.html#om-oss" class="dropdown-toggle">Om oss <span class="dropdown-arrow">▾</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="kurs.html">Partioversikt</a></li>
+            <li><a href="team.html">Våre trenere</a></li>
+            <li><a href="hva-er-judo.html">Hva er judo?</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#treninger">Timeplan</a></li>
+        <li><a href="kalender.html">Kalender</a></li>
+        <li><a href="klubbinfo.html">Klubbinfo</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#kontakt">Kontakt oss</a></li>
+        <li><a href="signup.html" class="btn-nav">Påmelding</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ORG CHART -->
+  <div class="orgkart-wrap">
+    <img src="Org kart RJK.png" alt="Organisasjonskart – Romerike Judoklubb" />
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-logo">Romerike Judoklubb</div>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">E-post</span>
+          <a href="mailto:kontakt@romerikejudoklubb.no">kontakt@romerikejudoklubb.no</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Telefon</span>
+          <a href="tel:+4792043361">+47 920 43 361</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Adresse</span>
+          <span>Åråsveien 16A, 2007 Kjeller</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Org.nr</span>
+          <span>993 861 561</span>
+        </div>
+      </div>
+      <a href="https://www.norsk-tipping.no/grasrotandelen/din-mottaker/993861561" target="_blank" rel="noopener" class="footer-grasrot">
+        <img src="Grasrot+Plakat+Liggende.webp" alt="Støtt oss med din Grasrotandel – Norsk Tipping" />
+      </a>
+      <p class="footer-copy">&copy; 2026 Romerike Judoklubb. Alle rettigheter forbeholdt.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
