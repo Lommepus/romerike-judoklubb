@@ -59,7 +59,8 @@ serve(async (req) => {
     const confirmRes = await fetch("https://api.resend.com/emails", {
       ...resendBase,
       body: JSON.stringify({
-        from: "Romerike Judoklubb <kontakt@romerikejudoklubb.no>",
+        from: "Romerike Judoklubb <post@send.romerikejudoklubb.no>",
+        reply_to: "kontakt@romerikejudoklubb.no",
         to: [epost],
         subject: "Påmelding mottatt – Romerike Judoklubb",
         html: `
@@ -84,7 +85,8 @@ serve(async (req) => {
     const firstClassRes = await fetch("https://api.resend.com/emails", {
       ...resendBase,
       body: JSON.stringify({
-        from: "Romerike Judoklubb <kontakt@romerikejudoklubb.no>",
+        from: "Romerike Judoklubb <post@send.romerikejudoklubb.no>",
+        reply_to: "kontakt@romerikejudoklubb.no",
         to: [epost],
         subject: "Alt du trenger å vite til din første trening",
         html: `
