@@ -5,6 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Romerike Judoklubb</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .session {
+      cursor: pointer;
+    }
+
+    #session-tooltip {
+      position: fixed;
+      z-index: 9999;
+      background: #ffffff;
+      color: #111111;
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      padding: 1rem 1.25rem;
+      width: 240px;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.15s, transform 0.15s;
+      border-top: 3px solid #c0392b;
+    }
+
+    #session-tooltip.stt-visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .stt-name {
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: #111;
+    }
+
+    .stt-desc {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.55;
+      margin-bottom: 0.5rem;
+    }
+
+    .stt-coach {
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+
+    .stt-coach strong { color: #333; }
+
+    .stt-link {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #c0392b;
+      text-decoration: none;
+    }
+
+    .stt-link:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
 
@@ -101,7 +160,7 @@
         <div class="schedule-card">
           <div class="day">Mandag</div>
           <div class="sessions">
-            <div class="session">
+            <div class="session" data-name="Kamptrening" data-desc="Intensiv kamptrening for de som ønsker å konkurrere eller pushe grensene sine. Fokus på randori og kampstrategi." data-coach="Hovedtrener" data-href="kurs.html#kamptrening">
               <span class="time">19:00 – 20:30</span>
               <span class="class-name">Kamptrening</span>
             </div>
@@ -110,15 +169,15 @@
         <div class="schedule-card">
           <div class="day">Tirsdag</div>
           <div class="sessions">
-            <div class="session">
+            <div class="session" data-name="Barn (7+)" data-desc="Barna lærer judoteknikk, regler og respekt for makkeren i et trygt og morsomt miljø." data-coach="Barne- og ungdomstrener" data-href="kurs.html#barn">
               <span class="time">17:30 – 18:30</span>
               <span class="class-name">Barn (7+)</span>
             </div>
-            <div class="session">
+            <div class="session" data-name="Ungdom (11+)" data-desc="For ungdom som vil utvikle tekniske ferdigheter og konkurransekunnskap. Fokus på kast, nedtagninger og randori." data-coach="Trener" data-href="kurs.html#ungdom">
               <span class="time">18:30 – 19:30</span>
               <span class="class-name">Ungdom (11+)</span>
             </div>
-            <div class="session">
+            <div class="session" data-name="Voksne – alle nivåer" data-desc="For alle voksne fra nybegynner til erfaren. Treningen dekker teknikk, kast og bakkejudo i et inkluderende miljø." data-coach="Hovedtrener" data-href="kurs.html#voksne">
               <span class="time">19:30 – 21:00</span>
               <span class="class-name">Voksne - alle nivåer (16+)</span>
             </div>
@@ -127,7 +186,7 @@
         <div class="schedule-card">
           <div class="day">Onsdag</div>
           <div class="sessions">
-            <div class="session">
+            <div class="session" data-name="Knøttejudo (4+)" data-desc="En lekbasert introduksjon til judo for de aller yngste. Fokus på motorikk, koordinasjon og gleden ved bevegelse." data-coach="Barne- og ungdomstrener" data-href="kurs.html#knottejudo">
               <span class="time">17:30 – 18:15</span>
               <span class="class-name">Knøttejudo (4+)</span>
             </div>
@@ -136,15 +195,15 @@
         <div class="schedule-card">
           <div class="day">Torsdag</div>
           <div class="sessions">
-            <div class="session">
+            <div class="session" data-name="Barn (7+)" data-desc="Barna lærer judoteknikk, regler og respekt for makkeren i et trygt og morsomt miljø." data-coach="Barne- og ungdomstrener" data-href="kurs.html#barn">
               <span class="time">17:30 – 18:30</span>
               <span class="class-name">Barn (7+)</span>
             </div>
-            <div class="session">
+            <div class="session" data-name="Ungdom (11+)" data-desc="For ungdom som vil utvikle tekniske ferdigheter og konkurransekunnskap. Fokus på kast, nedtagninger og randori." data-coach="Trener" data-href="kurs.html#ungdom">
               <span class="time">18:30 – 19:30</span>
               <span class="class-name">Ungdom (11+)</span>
             </div>
-            <div class="session">
+            <div class="session" data-name="Voksne – alle nivåer" data-desc="For alle voksne fra nybegynner til erfaren. Treningen dekker teknikk, kast og bakkejudo i et inkluderende miljø." data-coach="Hovedtrener" data-href="kurs.html#voksne">
               <span class="time">19:30 – 21:00</span>
               <span class="class-name">Voksne - alle nivåer (16+)</span>
             </div>
@@ -157,7 +216,7 @@
         <div class="schedule-card">
           <div class="day">Lørdag</div>
           <div class="sessions">
-            <div class="session">
+            <div class="session" data-name="Åpen matte" data-desc="Åpen treningsøkt for alle. Kom og tren i ditt eget tempo – enten du vil jobbe med teknikk eller kaste deg ut i randori." data-coach="Alle trenere" data-href="kurs.html#apen-matte">
               <span class="time">10:00 – 12:00</span>
               <span class="class-name">Åpen matte</span>
             </div>
@@ -295,5 +354,72 @@
 
 
   <script src="script.js"></script>
+
+  <div id="session-tooltip" aria-hidden="true">
+    <div class="stt-name"></div>
+    <div class="stt-desc"></div>
+    <div class="stt-coach"></div>
+    <a href="#" class="stt-link">Se partioversikt →</a>
+  </div>
+
+  <script>
+    (function () {
+      const tooltip = document.getElementById('session-tooltip');
+      const ttName = tooltip.querySelector('.stt-name');
+      const ttDesc = tooltip.querySelector('.stt-desc');
+      const ttCoach = tooltip.querySelector('.stt-coach');
+      const ttLink = tooltip.querySelector('.stt-link');
+      let hideTimer;
+      let activeEl = null;
+
+      function position(el) {
+        const r = el.getBoundingClientRect();
+        const tw = 240;
+        let left = r.right + 12;
+        let top = r.top;
+        if (left + tw > window.innerWidth - 8) left = r.left - tw - 12;
+        if (left < 8) left = 8;
+        const th = tooltip.offsetHeight;
+        if (top + th > window.innerHeight - 8) top = window.innerHeight - th - 8;
+        if (top < 8) top = 8;
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+      }
+
+      function show(el) {
+        clearTimeout(hideTimer);
+        ttName.textContent = el.dataset.name;
+        ttDesc.textContent = el.dataset.desc;
+        ttCoach.innerHTML = '<strong>Trener:</strong> ' + el.dataset.coach;
+        ttLink.href = el.dataset.href;
+        tooltip.setAttribute('aria-hidden', 'false');
+        tooltip.classList.add('stt-visible');
+        position(el);
+        activeEl = el;
+      }
+
+      function hide() {
+        tooltip.classList.remove('stt-visible');
+        tooltip.setAttribute('aria-hidden', 'true');
+        activeEl = null;
+      }
+
+      function scheduleHide() {
+        hideTimer = setTimeout(hide, 120);
+      }
+
+      document.querySelectorAll('.session[data-name]').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { show(el); });
+        el.addEventListener('mouseleave', scheduleHide);
+        el.addEventListener('click', function (e) {
+          if (activeEl === el) { hide(); } else { show(el); e.stopPropagation(); }
+        });
+      });
+
+      tooltip.addEventListener('mouseenter', function () { clearTimeout(hideTimer); });
+      tooltip.addEventListener('mouseleave', scheduleHide);
+      document.addEventListener('click', hide);
+    })();
+  </script>
 </body>
 </html>
