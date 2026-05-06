@@ -70,6 +70,40 @@
       .founder-bottom img { width: 100%; }
     }
 
+    /* ── Training text + video split ── */
+    .training-text-split {
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .training-text p {
+      color: var(--grey);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .training-text p:last-child { margin-bottom: 0; }
+
+    .training-video {
+      flex: 0 0 380px;
+    }
+
+    .training-video-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--grey);
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 800px) {
+      .training-text-split { flex-direction: column; }
+      .training-video { flex: 0 0 auto; width: 100%; }
+    }
+
     /* ── Etymology block ── */
     .etymology {
       display: flex;
@@ -311,20 +345,6 @@
         Navnet <em>judo</em> betyr bokstavelig talt <strong>«den milde veien»</strong> — prinsippet om å bruke motstanderens kraft mot ham selv, fremfor å møte kraft med kraft.
       </p>
 
-      <div style="text-align:center;">
-        <p style="font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--grey);margin-bottom:0.75rem;">Offisiell guide til judo</p>
-        <a href="https://youtu.be/pgfKasoI5yc?si=udXyjwF_jrz9IgHr" target="_blank" rel="noopener"
-           style="display:inline-block;position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.2);max-width:560px;width:100%;">
-          <img src="https://img.youtube.com/vi/pgfKasoI5yc/maxresdefault.jpg" alt="Offisiell guide til judo"
-               style="width:100%;display:block;" />
-          <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.2s;">
-            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="32" r="32" fill="rgba(255,255,255,0.9)"/>
-              <polygon points="26,20 50,32 26,44" fill="#c0392b"/>
-            </svg>
-          </span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -335,44 +355,27 @@
         <span class="label">Treningen</span>
         <h2>Hva skjer på matta?</h2>
       </div>
-      <div class="training-grid">
-
-        <div class="training-card">
-          <span class="training-label">Tachi-waza</span>
-          <h3>Kasteteknikker</h3>
-          <p>Judo er kanskje mest kjent for sine spektakulære kast. Du lærer å bruke balanse, timing og teknikk for å kaste motstanderen – uansett størrelse og styrke.</p>
+      <div class="training-text-split">
+        <div class="training-text">
+          <p>En judotrening består av flere elementer som til sammen gir en komplett idrettsopplevelse. Det første du lærer er <strong>ukemi</strong> – fallteknikk – som gjør treningen trygg og gir deg frihet til å kaste deg fullt ut i øvelsene.</p>
+          <p>Judo er kanskje mest kjent for <strong>tachi-waza</strong>, de spektakulære kasteinnene som utføres stående. Her lærer du å bruke balanse, timing og teknikk for å kaste motstanderen – uavhengig av størrelse og styrke. Når kampen går til bakken tar <strong>ne-waza</strong> over: kontrollhold, armlåser og teknikker som krever tålmodighet og evnen til å lese motstanderen.</p>
+          <p>I <strong>randori</strong> – fri kamp – settes alt på prøve mot en aktiv partner i kontrollerte omgivelser. Det er her teorien møter praksis og du virkelig utvikler deg. <strong>Kata</strong> er de tradisjonelle formøvelsene der teknikk trenes gjennom forhåndsbestemte bevegelsesmønstre med en partner – judoens klassiske form for teknikklæring.</p>
+          <p>For de som vil måle seg med andre finnes <strong>shiai</strong> – konkurranse – i alle aldre og nivåer. Konkurranser er en mulighet til å teste seg selv, møte andre utøvere og oppleve judofellesskapet på sitt beste.</p>
         </div>
-
-        <div class="training-card">
-          <span class="training-label">Ne-waza</span>
-          <h3>Bakkejudo</h3>
-          <p>Når kampen går til bakken brukes kontrollhold, armlåser og kvelerteknikker. Bakkejudo krever tålmodighet, teknikk og evnen til å lese motstanderen.</p>
+        <div class="training-video">
+          <p class="training-video-label">Offisiell guide til judo</p>
+          <a href="https://youtu.be/pgfKasoI5yc?si=udXyjwF_jrz9IgHr" target="_blank" rel="noopener"
+             style="display:block;position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.2);">
+            <img src="https://img.youtube.com/vi/pgfKasoI5yc/maxresdefault.jpg" alt="Offisiell guide til judo"
+                 style="width:100%;display:block;" />
+            <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="32" fill="rgba(255,255,255,0.9)"/>
+                <polygon points="26,20 50,32 26,44" fill="#c0392b"/>
+              </svg>
+            </span>
+          </a>
         </div>
-
-        <div class="training-card">
-          <span class="training-label">Randori</span>
-          <h3>Fri kamp</h3>
-          <p>I randori trener du teknikk mot en aktiv motstander i kontrollerte omgivelser. Det er her teorien møter praksis – og du virkelig utvikler deg.</p>
-        </div>
-
-        <div class="training-card">
-          <span class="training-label">Kata</span>
-          <h3>Formøvelser</h3>
-          <p>Kata er forhåndsbestemte bevegelsesmønstre som trenes med en partner. Det er judoens tradisjonelle form for teknikklæring og bevegelsesforståelse.</p>
-        </div>
-
-        <div class="training-card">
-          <span class="training-label">Ukemi</span>
-          <h3>Falltrening</h3>
-          <p>Noe av det første du lærer i judo er å falle trygt. God fallteknikk er ikke bare sikkerhet – det gjør at du tørr å kaste deg ut i treningen med full innsats.</p>
-        </div>
-
-        <div class="training-card">
-          <span class="training-label">Shiai</span>
-          <h3>Konkurranse</h3>
-          <p>Judo kan konkurreres i alle aldre og nivåer. Konkurranser er en mulighet til å teste deg selv, møte andre utøvere og oppleve judofellesskapet.</p>
-        </div>
-
       </div>
     </div>
   </section>
