@@ -8,7 +8,7 @@
   <style>
     .klubbinfo-cols {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 3rem;
       align-items: start;
     }
@@ -60,7 +60,7 @@
     .resource-meta {
       font-size: 0.82rem;
       color: var(--grey);
-      overflow-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     .resource-arrow {
