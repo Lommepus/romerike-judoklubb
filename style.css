@@ -463,6 +463,9 @@ footer {
 .footer-grasrot:hover { opacity: 0.85; }
 .footer-grasrot img { width: 100%; display: block; }
 
+.footer-logos a:not(.footer-grasrot) { transition: opacity 0.2s; }
+.footer-logos a:not(.footer-grasrot):hover { opacity: 0.85; }
+
 .footer-njf-logo {
   display: block;
   height: 130px;
