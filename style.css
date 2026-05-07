@@ -574,6 +574,8 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .section { padding-left: 0; padding-right: 0; }
+  .container { padding: 0 1.5rem; }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-img-wrap { grid-row: auto; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
