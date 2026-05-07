@@ -465,9 +465,11 @@ footer {
 
 .footer-njf-logo {
   display: block;
-  width: 100px;
+  width: 130px;
   border-radius: 6px;
   flex-shrink: 0;
+  background: white;
+  padding: 8px;
 }
 
 @media (max-width: 768px) {
