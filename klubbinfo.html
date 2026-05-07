@@ -14,7 +14,9 @@
     }
 
     @media (max-width: 768px) {
-      .klubbinfo-cols { grid-template-columns: 1fr; gap: 2rem; }
+      .klubbinfo-cols { display: block; }
+      .klubbinfo-cols > div { margin-bottom: 2rem; }
+      .klubbinfo-cols > div:last-child { margin-bottom: 0; }
     }
 
     .resource-list {
