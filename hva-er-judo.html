@@ -65,10 +65,34 @@
       aspect-ratio: 4/3;
     }
 
+    .founder-kano-mobile {
+      display: none;
+    }
+
     @media (max-width: 600px) {
-      .founder-gallery { flex-wrap: wrap; }
-      .founder-center { flex: 0 0 160px; }
+      .founder-gallery { flex-wrap: nowrap; gap: 8px; }
+      .founder-center { display: none; }
+      .founder-side { flex: 1; }
+      .founder-side img { aspect-ratio: 1; }
       .founder-bottom img { width: 100%; }
+      .founder-kano-mobile {
+        display: block;
+        text-align: center;
+        margin: 1.5rem auto 0;
+        max-width: 260px;
+      }
+      .founder-kano-mobile img {
+        width: 100%;
+        border-radius: var(--radius);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        object-fit: cover;
+        display: block;
+      }
+      .founder-kano-mobile figcaption {
+        margin-top: 0.6rem;
+        font-size: 0.85rem;
+        color: var(--grey);
+      }
     }
 
     /* ── Training text + video split ── */
@@ -345,6 +369,11 @@
       <p style="max-width:680px;margin:0 auto 2.5rem;text-align:center;color:var(--grey);line-height:1.75">
         Navnet <em>judo</em> betyr bokstavelig talt <strong>«den milde veien»</strong> — prinsippet om å bruke motstanderens kraft mot ham selv, fremfor å møte kraft med kraft.
       </p>
+
+      <figure class="founder-kano-mobile">
+        <img src="pictures/Portrait_of_late_Mr._Kano.jpg" alt="Jigoro Kano" />
+        <figcaption>Jigoro Kano (1860–1938)</figcaption>
+      </figure>
 
     </div>
   </section>
