@@ -76,11 +76,17 @@
 
     .event-card--past {
       opacity: 0.55;
+      position: relative;
     }
-    .event-card--past .event-title {
-      text-decoration: line-through;
-      text-decoration-color: var(--red, #c0392b);
-      text-decoration-thickness: 2px;
+    .event-card--past::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--red, #c0392b);
+      pointer-events: none;
     }
     .event-card--past:hover {
       transform: none;
